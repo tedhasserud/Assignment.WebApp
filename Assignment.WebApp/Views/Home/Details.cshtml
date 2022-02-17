@@ -1,0 +1,22 @@
+﻿@model Assignment.WebApp.Models.ViewModels.HomeIndexViewModel
+
+<h4>Produktinformation</h4>
+
+@*@foreach(var p in Model.Products)
+    {
+    <div class="mb-3">
+    <div><strong>@p.Name</strong></div>
+    <div class="text-muted">@p.Description</div>
+    <div class="text-muted">@p.Category</div>
+    <div class="text-muted">@p.Price</div>
+    <div class="text-muted">@p.EAN</div>
+    </div>
+
+    }*@
+<div class="mb-3">
+    <div><strong>@Html.DisplayFor(model => model.ProductForm.Name)</strong></div>
+    <div class="text-muted">@Html.DisplayFor(model => model.ProductForm.Description)</div>
+    <div class="text-muted">@Html.DisplayFor(model => model.ProductForm.Category)</div>
+    <div class="text-muted">@Html.DisplayFor(model => model.ProductForm.Price)</div>
+    <div class="text-muted">@Html.DisplayFor(model => model.ProductForm.EAN)</div>
+</div>

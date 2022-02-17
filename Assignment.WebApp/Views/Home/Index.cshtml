@@ -1,0 +1,34 @@
+﻿@model Assignment.WebApp.Models.ViewModels.HomeIndexViewModel
+
+@{
+    ViewData["Title"] = "Skapa produkter";
+}
+
+<h4 class="mb-4">Skapa produkter</h4>
+<div>
+    <form asp-action="Index" method="post">
+        <div class="mb-3">
+            <input asp-for="ProductForm.Name" placeholder="Produktens namn" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <input asp-for="ProductForm.Description" placeholder="Produktens beskrivning" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <input asp-for="ProductForm.Price" placeholder="Produktens Pris" class="form-control" />
+        </div>
+          <div class="mb-3">
+            <input asp-for="ProductForm.EAN" placeholder="EAN" class="form-control" />
+        </div>
+          <div class="mb-3">
+            <input asp-for="ProductForm.CategoryId" placeholder="Kategori Id" class="form-control" />
+        </div>
+        <button type="submit" class="btn-primary btn-primary">Skapa</button>
+    </form>
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+﻿@model Assignment.WebApp.Models.ViewModels.HomeIndexViewModel
+
+@{
+    ViewData["Title"] = "Tv";
+}
+<h2>Tv</h2>
+<br />
+@foreach (var p in Model.Products)
+{
+    if (p.Category == "Tv")
+    {
+        <div class="mb-3">
+            <div><strong>@p.Name</strong></div>
+            <div class="text-muted">@p.Description</div>
+            <div class="text-muted">@p.Category</div>
+            <a asp-action="Details" asp-route-id="@p.Id"> Details </a>
+        </div>
+    }
+
+
+}
